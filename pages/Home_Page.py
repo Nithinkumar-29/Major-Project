@@ -10,6 +10,14 @@ from typing import Dict
 from gtts import gTTS
 import webbrowser
 from deep_translator import GoogleTranslator
+from streamlit.components.v1 import html
+def open_page(url):
+    open_script= """
+        <script type="text/javascript">
+            window.open('%s', '_blank').focus();
+        </script>
+    """ % (url)
+    html(open_script)
 #pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 api_key = "c2927870-d989-11ee-a222-bf997f2bfeae"
 user_id = "188821"
@@ -201,10 +209,7 @@ if(img is not None):
 							elif target_lang in list(speech_codes_1.keys()):
 								url = "https://ivrapi.indiantts.in/tts?type=indiantts&text="+translated+"&api_key="+api_key+"&user_id="+user_id+"&action=play&numeric=hcurrency&lang="+speech_codes_1[target_lang]+"_female_v1&ver=2"
 								st.write("Generated speech")
-								temp_bool = st.button("Play audio")
-								if temp_bool:
-									webbrowser.open_new_tab(url)
-									#st.write(lang)
+								temp_bool = st.button('Play Audio', on_click=open_page, args=(url,))
 							else:
 								st.write("Can only generate speech to one of the languages:\n1. English\n2. French\n3. Portuguese\n4. Spanish\n5. Hindi\n6. Marathi\n7. Gujarati\n8. Kannada ")
 col1,col2,col3 = st.columns([8,1,8])
