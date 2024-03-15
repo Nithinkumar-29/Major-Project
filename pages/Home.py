@@ -9,7 +9,7 @@ from typing import Dict
 from gtts import gTTS
 import webbrowser
 from deep_translator import GoogleTranslator
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+#pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 api_key = "c2927870-d989-11ee-a222-bf997f2bfeae"
 user_id = "188821"
 st.set_page_config(layout="wide")
