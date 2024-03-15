@@ -163,7 +163,7 @@ if(img is not None):
 	img = word.resize((224,224))
 	#img = tf.keras.utils.load_img(word,target_size=(224,224,3))
 	img1 = tf.keras.preprocessing.image.img_to_array(img)
-	img1 = np.expand_dims(img1,axis=0)
+	img1 = np.expand_dims(img,axis=0)
 	model = tf.keras.models.load_model("alexnet_5.h5",compile=False)
 	model.compile(optimizer='adam',loss='categorical_crossentropy')
 	pred = model.predict(img1)
