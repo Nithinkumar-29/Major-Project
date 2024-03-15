@@ -6,3 +6,4 @@ tensorflow==2.9.1
 pytesseract==0.3.10
 gTTS==2.5.1
 deep-translator==1.11.4
+opencv-python==4.6.0.66
