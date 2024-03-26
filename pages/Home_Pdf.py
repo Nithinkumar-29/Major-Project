@@ -220,7 +220,7 @@ if(pdf is not None):
   pdf.seek(0)
   col1,col2 = st.columns([1,1])
   with col1:
-      pdf_viewer(pdf.read())
+      pdf_viewer(pdf.read(),height=1000)
   pages = []
 	# st.write(enumerate(images))
   for i, image in enumerate(images):
