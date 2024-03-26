@@ -18,7 +18,7 @@ from reportlab.platypus import Paragraph, PageBreak, SimpleDocTemplate
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
 api_key = "c2927870-d989-11ee-a222-bf997f2bfeae"
 user_id = "188821"
 st.set_page_config(layout="wide")
