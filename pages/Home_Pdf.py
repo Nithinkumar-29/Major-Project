@@ -258,4 +258,4 @@ if(pdf is not None):
     translated_pdf: bytes = buffer.getvalue()
   # translated_pdf = doc.build(content)
     pdf_viewer(translated_pdf,height=900)
-st.download_button("Download PDF",data=translated_pdf,file_name='translated_pdf.pdf')
+  st.download_button("Download PDF",data=translated_pdf,file_name='translated_pdf.pdf')
