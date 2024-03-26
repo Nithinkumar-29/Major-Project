@@ -3,4 +3,3 @@ tesseract-ocr-tel
 tesseract-ocr-hin
 tesseract-ocr-guj
 tesseract-ocr-kan
-poppler
