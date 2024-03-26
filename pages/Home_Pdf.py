@@ -59,7 +59,7 @@ VOCABS['devanagari'] = 'रचख़३ॾऍृेञलॻॉऴषॐॢ१य�
 def create_pdf(pages_content):
     styles = getSampleStyleSheet()
 
-    pdfmetrics.registerFont(TTFont('Regular', '../GoNotoKurrent-Regular.ttf'))
+    pdfmetrics.registerFont(TTFont('Regular', 'GoNotoKurrent-Regular.ttf'))
     styles['Normal'].fontName = 'Regular'
     styles['Normal'].fontSize = 15
     styles['Normal'].leading = 16
