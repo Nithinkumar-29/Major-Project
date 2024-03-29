@@ -238,7 +238,7 @@ if(pdf is not None):
   # detected_lang = op[label]
   text = predict(pages,lang_code[label])
   with col2:
-    target_lang = st.selectbox("Select the target language for translation",list(lang_codes.keys()))
+    target_lang = st.selectbox("Select the target language for translation",list(lang_codes.keys()),index=45)
     translated_text = []
     for i in text:
       translated_text_temp = []
