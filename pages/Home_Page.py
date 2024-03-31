@@ -81,7 +81,7 @@ def get_word(img):
     box_count+=1
     temp_img = Image.fromarray(box)
     if(w>=100 and h>=20):
-      return temp_img
+      return box
     # print(temp_img.size)
       # plt.imshow(temp_img)
     # plt.axis('off')
