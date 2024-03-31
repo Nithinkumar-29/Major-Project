@@ -170,6 +170,7 @@ if(img is not None):
 	image = Image.open(img)
 	word = get_word(image)
 	st.write(word.size)
+	word = word.convert("RGB")
 	img2 = word.resize((224, 224))
 	st.write(img2.size)
 	st.image(img2)
