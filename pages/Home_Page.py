@@ -169,6 +169,7 @@ if(img is not None):
 	image = Image.open(img)
 	word = get_word(image)
 	img = cv.resize(word, (224, 224))
+	st.image(img)
 	#img = tf.keras.utils.load_img(word,target_size=(224,224,3))
 	img1 = tf.keras.preprocessing.image.img_to_array(img)
 	img1 = np.expand_dims(img,axis=0)
