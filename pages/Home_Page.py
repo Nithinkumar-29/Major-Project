@@ -76,7 +76,8 @@ def get_word(img):
   for points in contours:
     pad = 10
     x,y,w,h = cv.boundingRect(points)
-    box = np.array(img)[y:y+h,x:x+w,:]
+    tempp = np.array(img)
+    box = tempp[y:y+h,x:x+w,:]
     # print(list(box.flatten()).count(255),box.shape)
     box_count+=1
     temp_img = Image.fromarray(box)
