@@ -81,7 +81,7 @@ def get_word(img):
     box_count+=1
     temp_img = Image.fromarray(box)
     if(w>=100 and h>=20):
-      return box
+      return temp_img
     # print(temp_img.size)
       # plt.imshow(temp_img)
     # plt.axis('off')
@@ -168,7 +168,7 @@ if(img is not None):
 	temp_img = img
 	image = Image.open(img)
 	word = get_word(image)
-	img2 = cv.resize(word, (224, 224))
+	img2 = word.resize(224, 224)
 	st.image(img2)
 	#img = tf.keras.utils.load_img(word,target_size=(224,224,3))
 	img1 = tf.keras.preprocessing.image.img_to_array(img2)
