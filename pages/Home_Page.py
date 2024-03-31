@@ -66,7 +66,7 @@ def get_word(img):
   #thresholding to convert into binary
   thresholded = cv.adaptiveThreshold(blur,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,cv.THRESH_BINARY_INV,159,3)
   #dilate image to connect text contours
-  kernel = cv.getStructuringElement(cv.MORPH_RECT,(3,3))
+  kernel = cv.getStructuringElement(cv.MORPH_RECT,(3,1))
   dilated = cv.morphologyEx(thresholded,cv.MORPH_CLOSE,kernel)
   # dilated = cv.dilate(thresholded,kernel,iterations=1)
   #get external contours
