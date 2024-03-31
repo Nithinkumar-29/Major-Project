@@ -62,7 +62,7 @@ def get_word(img):
   #converting to grayscale
   gray = cv.cvtColor(img2,cv.COLOR_BGR2GRAY)
   #applying gaussian blur
-  blur = cv.GaussianBlur(gray,(5,5),0)
+  blur = cv.GaussianBlur(gray,(9,9),0)
   #thresholding to convert into binary
   thresholded = cv.adaptiveThreshold(blur,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,cv.THRESH_BINARY_INV,159,3)
   #dilate image to connect text contours
@@ -80,7 +80,7 @@ def get_word(img):
     # print(list(box.flatten()).count(255),box.shape)
     box_count+=1
     temp_img = Image.fromarray(box)
-    if(w>=100 and h>=20):
+    if(w>=50 and h>=20):
       return temp_img
     # print(temp_img.size)
       # plt.imshow(temp_img)
