@@ -171,7 +171,7 @@ if(img is not None):
 	word = get_word(image)
 	st.write(word.size)
 	img2 = word.resize((224, 224))
-	st.write(img2)
+	st.write(img2.size)
 	st.image(img2)
 	#img = tf.keras.utils.load_img(word,target_size=(224,224,3))
 	img1 = tf.keras.preprocessing.image.img_to_array(img2)
