@@ -102,7 +102,7 @@ def get_word(img):
     temp_img = Image.fromarray(box)
     # temp_img.save(str("/content/drive/MyDrive/Project/Books/Words/Kannada words/img_"+str(box_count+total_boxes)+".jpg"))
     # print("/content/drive/MyDrive/Project/Books/Words/Kannada words/img_"+str(box_count+total_boxes)+".jpg")
-    cv.rectangle(img1,(x,y),(x+w,y+h),(0,0,255),2)
+    #cv.rectangle(img1,(x,y),(x+w,y+h),(0,0,255),2)
   # plt.figure(figsize=(10,10))
   # plt.imshow(img1)
   # plt.axis('off')
