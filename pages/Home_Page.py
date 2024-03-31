@@ -169,6 +169,7 @@ if(img is not None):
 	temp_img = img
 	image = Image.open(img)
 	word = get_word(image)
+	st.write(word.size)
 	img2 = word.resize((224, 224))
 	st.image(img2)
 	#img = tf.keras.utils.load_img(word,target_size=(224,224,3))
